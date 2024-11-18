@@ -8,6 +8,8 @@ DOMAIN-SUFFIX,hao123.com
 
 # 域名关键字匹配
 DOMAIN-KEYWORD,baidu
+DOMAIN-KEYWORD,apple
+DOMAIN-KEYWORD,icloud
 
 
 # IP段匹配
