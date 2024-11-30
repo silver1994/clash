@@ -1,5 +1,7 @@
 DOMAIN-SUFFIX,m-team.cc
 DOMAIN-KEYWORD,fsm
+DOMAIN-SUFFIX,ipleak.net
+DOMAIN-SUFFIX,browserleaks.com
 
 # IP段匹配
 IP-CIDR,142.171.133.131/32,no-resolve
