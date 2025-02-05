@@ -1,5 +1,8 @@
 # DOMAIN-SUFFIX,kp.m-team.cc
 DOMAIN-KEYWORD,fsm
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,raw.githubusercontent.com
+
 
 # IP段匹配
 IP-CIDR,142.171.133.131/32,no-resolve
