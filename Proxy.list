@@ -3,7 +3,7 @@ DOMAIN-SUFFIX,fsm.name
 # DOMAIN-SUFFIX,qingwapt.com
 DOMAIN-SUFFIX,raw.githubusercontent.com
 DOMAIN-KEYWORD,openrouter
-
+DOMAIN-SUFFIX,jellyfin.org
 
 # IP段匹配
 IP-CIDR,142.171.133.131/32,no-resolve
