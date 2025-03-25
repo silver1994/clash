@@ -3,6 +3,7 @@ DOMAIN-SUFFIX,fsm.name
 # DOMAIN-SUFFIX,qingwapt.com
 DOMAIN-SUFFIX,raw.githubusercontent.com
 DOMAIN-KEYWORD,openrouter
+DOMAIN-KEYWORD,unraid
 DOMAIN-SUFFIX,jellyfin.org
 
 # IP段匹配
