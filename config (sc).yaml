@@ -136,6 +136,7 @@ rules:
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,download,直连
   - RULE-SET,F1,🔯 美国故转
+  - RULE-SET,NINTENDO,🔯 日本故转
   - RULE-SET,ai,🤖 ChatGPT
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
@@ -167,6 +168,7 @@ rule-providers:
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
   download: { <<: *class, url: "https://raw.githubusercontent.com/silver1994/clash/refs/heads/main/Download.list"}
   F1: { <<: *class, url: "https://raw.githubusercontent.com/silver1994/clash/refs/heads/main/F1.list"}
+  NINTENDO: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
