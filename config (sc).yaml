@@ -135,7 +135,9 @@ rules:
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,download,直连
+  - RULE-SET,steamcn,直连
   - RULE-SET,guowai,🚀 默认代理
+  - RULE-SET,steam,🔯 香港故转
   - RULE-SET,F1,🔯 美国故转
   - RULE-SET,NINTENDO,🔯 日本故转
   - RULE-SET,ai,🤖 ChatGPT
@@ -168,6 +170,8 @@ rule-providers:
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
   download: { <<: *class, url: "https://raw.githubusercontent.com/silver1994/clash/refs/heads/main/Download.list"}
+  steamcn: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam@cn.mrs"}
+  steam: { <<: *class, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/steam.list"}
   guowai: { <<: *class, url: "https://raw.githubusercontent.com/silver1994/clash/refs/heads/main/Proxy.list"}
   F1: { <<: *class, url: "https://raw.githubusercontent.com/silver1994/clash/refs/heads/main/F1.list"}
   NINTENDO: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list"}
