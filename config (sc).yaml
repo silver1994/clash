@@ -171,7 +171,7 @@ rule-providers:
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
   download: { <<: *class, url: "https://raw.githubusercontent.com/silver1994/clash/refs/heads/main/Download.list"}
   steamcn: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam@cn.mrs"}
-  steam: { <<: *class, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/steam.list"}
+  steam: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam.mrs"}
   guowai: { <<: *class, url: "https://raw.githubusercontent.com/silver1994/clash/refs/heads/main/Proxy.list"}
   F1: { <<: *class, url: "https://raw.githubusercontent.com/silver1994/clash/refs/heads/main/F1.list"}
   NINTENDO: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list"}
