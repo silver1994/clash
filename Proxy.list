@@ -5,6 +5,8 @@ DOMAIN-SUFFIX,raw.githubusercontent.com
 DOMAIN-KEYWORD,openrouter
 DOMAIN-KEYWORD,unraid
 DOMAIN-SUFFIX,jellyfin.org
+DOMAIN-KEYWORD,mtweb
+DOMAIN-KEYWORD,jdbinvesting
 
 # IP段匹配
 IP-CIDR,142.171.133.131/32,no-resolve
