@@ -140,7 +140,6 @@ rules:
   - RULE-SET,discord_domain,🚀 默认代理
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxylite,🚀 默认代理
-  - RULE-SET,guowai,🚀 默认代理
   - RULE-SET,x_domain,🚀 默认代理
   - RULE-SET,amazon,🚀 默认代理
   - RULE-SET,gemini,gemini
@@ -165,6 +164,7 @@ rules:
   - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
   - RULE-SET,telegram_ip,📲 Telegram,no-resolve
   - RULE-SET,Globe / Domain,🚀 默认代理
+  - RULE-SET,guowai,🚀 默认代理
   # - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,直连
   - RULE-SET,cn_ip,直连
