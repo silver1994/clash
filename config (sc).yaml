@@ -4,7 +4,7 @@
 # 机场订阅
 proxy-providers:
   blueberry:
-    url: "xxxxxxxxxxxxxxxxxxx"
+    url: "https://sub.berryzee.com/rt-g0-d-tjvt-cm-d58y-j/bff9b81c7197dcd32ddec6e240ad3d44"
     type: http
     interval: 86400
     health-check:
@@ -14,7 +14,7 @@ proxy-providers:
     proxy: 直连
 
   ust:
-    url: "xxxxxxxxxxxxxxxxxxxxx"
+    url: "https://23.158.136.135:889/sleep/fd2e4134b2f3194ff8447c5750687b5f"
     type: http
     interval: 86400
     health-check:
@@ -24,7 +24,7 @@ proxy-providers:
     proxy: 直连
     
   hongxing:
-    url: "xxxxxxxxxxxxxxxxxxxxxx"
+    url: "https://106.55.228.246:36666/hxvip?token=5dbb2fa4278a802211635135bdb169bc"
     type: http
     interval: 86400
     health-check:
@@ -123,7 +123,7 @@ proxy-groups:
   - {name: 🚀 默认代理, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 📹 YouTube, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 🍀 Google, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🤖 ChatGPT, type: select, proxies: [🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 🎵 TikTok, type: select, proxies: [🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 📲 Telegram, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
@@ -159,6 +159,7 @@ rules:
   - RULE-SET,private_domain,直连
   - RULE-SET,download,直连
   - RULE-SET,steamcn,直连
+  - RULE-SET,binance,直连
   - RULE-SET,discord_domain,🚀 默认代理
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxylite,🚀 默认代理
@@ -206,6 +207,7 @@ rule-providers:
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
   PlayStation / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PlayStation/PlayStation.list"}
   ibkr: { <<: *class, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/ibkr.list"}
+  binance: { <<: *class, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/binance.list"}
   schwab: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/schwab.mrs"}
   amazon: { <<: *class, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/amazon.list"}
   steamcn: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/steam@cn.mrs"}
