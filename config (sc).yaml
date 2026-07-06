@@ -4,7 +4,7 @@
 # 机场订阅
 proxy-providers:
   blueberry:
-    url: "https://sub.berryzee.com/rt-g0-d-tjvt-cm-d58y-j/bff9b81c7197dcd32ddec6e240ad3d44"
+    url: "订阅连接"
     type: http
     interval: 86400
     health-check:
@@ -14,7 +14,7 @@ proxy-providers:
     proxy: 直连
 
   ust:
-    url: "https://23.158.136.135:889/sleep/fd2e4134b2f3194ff8447c5750687b5f"
+    url: "订阅连接"
     type: http
     interval: 86400
     health-check:
@@ -24,7 +24,7 @@ proxy-providers:
     proxy: 直连
     
   hongxing:
-    url: "https://106.55.228.246:36666/hxvip?token=5dbb2fa4278a802211635135bdb169bc"
+    url: "订阅连接"
     type: http
     interval: 86400
     health-check:
