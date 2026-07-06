@@ -3,8 +3,28 @@
 # 跑裸核用户请自行去掉下方控制面板模块的注释。
 # 机场订阅
 proxy-providers:
-  Airport1:
-    url: "机场订阅1"
+  blueberry:
+    url: "订阅连接"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 直连
+
+  ust:
+    url: "订阅连接"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 直连
+    
+  hongxing:
+    url: "订阅连接"
     type: http
     interval: 86400
     health-check:
