@@ -109,7 +109,7 @@ dns:
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以。
 proxy-groups:
   # === 新增的所有地区自动测速 (url-test) 分组 ===
-  - {name: ⚡ 全球自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204"}
+  - {name: ⚡ 全球自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "^(?!.*(官网|套餐|剩余|直连|订阅|流量)).*$"}
   
   # === 原有的单地区自动测速 (url-test) 分组 ===
   - {name: ⚡ 香港自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)港|hk|hongkong|hong kong"}
