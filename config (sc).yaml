@@ -4,17 +4,7 @@
 # 机场订阅
 proxy-providers:
   blueberry:
-    url: "订阅连接"
-    type: http
-    interval: 86400
-    health-check:
-      enable: true
-      url: https://www.gstatic.com/generate_204
-      interval: 300
-    proxy: 直连
-
-  ust:
-    url: "订阅连接"
+    url: "订阅链接"
     type: http
     interval: 86400
     health-check:
@@ -24,7 +14,7 @@ proxy-providers:
     proxy: 直连
     
   hongxing:
-    url: "订阅连接"
+    url: "订阅链接"
     type: http
     interval: 86400
     health-check:
@@ -120,25 +110,36 @@ dns:
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
-  - {name: 🚀 默认代理, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 📹 YouTube, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🍀 Google, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🤖 ChatGPT, type: select, proxies: [🔯 AI故转,🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🎵 TikTok, type: select, proxies: [🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 📲 Telegram, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🎥 NETFLIX, type: select, proxies: [🔯 台湾故转, 🔯 狮城故转, 🔯 香港故转, 🔯 日本故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: gemini, type: select, proxies: [🔯 AI故转,🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: ibkr, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 嘉信证券, type: select, proxies: [🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: steam, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: blizaard, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: F1, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: NINTENDO, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 💶 PayPal, type: select, proxies: [🔯 台湾故转, 🔯 日本故转, 🔯 香港故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🐬 OneDrive, type: select, proxies: [🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🪟 Microsoft, type: select, proxies: [🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  # === 新增的地区自动测速 (url-test) 分组 ===
+  # tolerance: 50 表示延迟差值大于 50ms 时才会切换，避免频繁跳动
+  - {name: ⚡ 香港自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)港|hk|hongkong|hong kong"}
+  - {name: ⚡ 台湾自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)台|TW|taiwan|tai wan"}
+  - {name: ⚡ 日本自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)日|jp|japan"}
+  - {name: ⚡ 狮城自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)新加坡|坡|狮城|SG|Singapore"}
+  - {name: ⚡ 美国自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)美|us|unitedstates|united states"}
+
+  # === 原有的业务分组 (已将新增的 ⚡ 自动组 加入到列表中，并排在前面) ===
+  - {name: 🚀 默认代理, type: select, proxies: [⚡ 香港自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 AI故转, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 📹 YouTube, type: select, proxies: [⚡ 香港自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 AI故转, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🍀 Google, type: select, proxies: [⚡ 香港自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 AI故转, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [⚡ 美国自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 香港自动, 🔯 AI故转,🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [⚡ 香港自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🎵 TikTok, type: select, proxies: [⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 📲 Telegram, type: select, proxies: [⚡ 香港自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🎥 NETFLIX, type: select, proxies: [⚡ 台湾自动, ⚡ 狮城自动, ⚡ 香港自动, ⚡ 日本自动, ⚡ 美国自动, 🔯 台湾故转, 🔯 狮城故转, 🔯 香港故转, 🔯 日本故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: gemini, type: select, proxies: [⚡ 美国自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 香港自动, 🔯 AI故转,🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: ibkr, type: select, proxies: [⚡ 香港自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 嘉信证券, type: select, proxies: [⚡ 美国自动, ⚡ 香港自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: steam, type: select, proxies: [⚡ 香港自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: blizaard, type: select, proxies: [⚡ 香港自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: F1, type: select, proxies: [⚡ 香港自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: NINTENDO, type: select, proxies: [⚡ 香港自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 💶 PayPal, type: select, proxies: [⚡ 台湾自动, ⚡ 日本自动, ⚡ 香港自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 台湾故转, 🔯 日本故转, 🔯 香港故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🐬 OneDrive, type: select, proxies: [⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🪟 Microsoft, type: select, proxies: [⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 默认代理, ⚡ 香港自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+
+  # === 原有的底层节点筛选与故转组 ===
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 台湾节点, type: select, include-all: true, filter: "(?i)台|TW|taiwan|tai wan"}
   - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日|jp|japan"}
@@ -161,13 +162,19 @@ rules:
   - RULE-SET,download,直连
   - RULE-SET,steamcn,直连
   - RULE-SET,binance,直连
+  - RULE-SET,cn_domain,直连
+  - RULE-SET,cn_ip,直连
+  - DOMAIN-SUFFIX,cn,直连      # 匹配所有以 .cn 结尾的域名（走直连）
+  - GEOIP,CN,直连              # 匹配所有服务器IP在中国大陆的请求（走直连）
+  - RULE-SET,PlayStation / Domain,直连
+  - RULE-SET,apple_domain,直连
+  - RULE-SET,apple_ip,直连,no-resolve
   - RULE-SET,discord_domain,🚀 默认代理
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,x_domain,🚀 默认代理
   - RULE-SET,amazon,🚀 默认代理
   - RULE-SET,gemini,gemini
-  - RULE-SET,PlayStation / Domain,直连
   - RULE-SET,ibkr,ibkr
   - RULE-SET,schwab,嘉信证券
   - RULE-SET,steam,steam
@@ -180,20 +187,16 @@ rules:
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,onedrive_domain,🐬 OneDrive
   - RULE-SET,microsoft_domain,🪟 Microsoft
-  - RULE-SET,apple_domain,直连
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,telegram_domain,📲 Telegram
   - RULE-SET,netflix_domain,🎥 NETFLIX
   - RULE-SET,paypal_domain,💶 PayPal
-  - RULE-SET,apple_ip,直连,no-resolve
   - RULE-SET,google_ip,🍀 Google,no-resolve
   - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
   - RULE-SET,telegram_ip,📲 Telegram,no-resolve
   - RULE-SET,Globe / Domain,🚀 默认代理
   - RULE-SET,guowai,🚀 默认代理
-  # - RULE-SET,geolocation-!cn,🚀 默认代理
-  - RULE-SET,cn_domain,直连
-  - RULE-SET,cn_ip,直连
+  - RULE-SET,geolocation-!cn,🚀 默认代理
   - MATCH,🐟 漏网之鱼
 
 # 规则集
@@ -231,7 +234,7 @@ rule-providers:
   speedtest_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs"}
   discord_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/discord.mrs"}
   tiktok_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
-  # geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
+  geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
   x_domain: {<<: *domain, url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/x.mrs"}
   Globe / Domain: {<<: *class, url: "https://gh-proxy.com/raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list"} 
   cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
