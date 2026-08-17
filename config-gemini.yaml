@@ -3,7 +3,7 @@
 # 跑裸核用户请自行去掉下方控制面板模块的注释。
 # 机场订阅
 proxy-providers:
-  blueberry:
+  机场:
     url: "订阅连接"
     type: http
     interval: 86400
@@ -88,6 +88,7 @@ dns:
 proxy-groups:
   # === 自动测速分组 ===
   - {name: ⚡ 全球自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "^(?!.*(官网|套餐|剩余|直连|订阅|流量)).*$"}
+  - {name: ⚡ 亚洲自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)港|hk|hongkong|hong kong|台|tw|taiwan|tai wan|日|jp|japan|新加坡|坡|狮城|sg|singapore|韩|kr|korea"}
   - {name: ⚡ 香港自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: ⚡ 台湾自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)台|TW|taiwan|tai wan"}
   - {name: ⚡ 日本自动, type: url-test, include-all: true, tolerance: 50, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?i)日|jp|japan"}
@@ -97,33 +98,33 @@ proxy-groups:
   # === 业务分组 (利用 YAML 锚点精简重复节点列表) ===
   
   # 1. 默认与通用媒体组 (全节点 + 全故转)
-  - {name: 🚀 默认代理, type: select, proxies: &p_main [⚡ 全球自动, ⚡ 香港自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 AI故转, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🚀 默认代理, type: select, proxies: &p_main [⚡ 全球自动, ⚡ 亚洲自动, ⚡ 香港自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 AI故转, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 📹 YouTube, type: select, proxies: *p_main}
   - {name: 🍀 Google, type: select, proxies: *p_main}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: *p_main}
   - {name: 📲 Telegram, type: select, proxies: *p_main}
   
   # 2. AI 与美国优先组 (已将美股券商合并至此)
-  - {name: 🤖 ChatGPT, type: select, proxies: &p_us [⚡ 全球自动, ⚡ 美国自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 香港自动, 🔯 AI故转, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🤖 ChatGPT, type: select, proxies: &p_us [⚡ 全球自动, ⚡ 亚洲自动, ⚡ 美国自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 香港自动, 🔯 AI故转, 🔯 香港故转, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: ✨ gemini, type: select, proxies: *p_us}
   - {name: 💹 美股分流, type: select, proxies: *p_us}
 
   # 3. 规避香港节点组 (适用于 TikTok / 微软等服务)
-  - {name: 🎵 TikTok, type: select, proxies: &p_no_hk [⚡ 全球自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🎵 TikTok, type: select, proxies: &p_no_hk [⚡ 全球自动, ⚡ 亚洲自动, ⚡ 台湾自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 台湾故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 💶 PayPal, type: select, proxies: *p_no_hk}
   - {name: 🐬 OneDrive, type: select, proxies: *p_no_hk}
   - {name: 🪟 Microsoft, type: select, proxies: *p_no_hk}
 
   # 4. 游戏平台组 (规避台湾节点)
-  - {name: 🎮 steam, type: select, proxies: &p_game [⚡ 全球自动, ⚡ 香港自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🎮 steam, type: select, proxies: &p_game [⚡ 全球自动, ⚡ 亚洲自动, ⚡ 香港自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: ❄️ blizzard, type: select, proxies: *p_game}
   - {name: 🏎️ F1, type: select, proxies: *p_game}
   - {name: 🍄 NINTENDO, type: select, proxies: *p_game}
 
   # 5. 流媒体 (Netflix 台湾/狮城优先)
-  - {name: 🎥 NETFLIX, type: select, proxies: &p_netflix [⚡ 全球自动, ⚡ 台湾自动, ⚡ 狮城自动, ⚡ 香港自动, ⚡ 日本自动, ⚡ 美国自动, 🔯 台湾故转, 🔯 狮城故转, 🔯 香港故转, 🔯 日本故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🎥 NETFLIX, type: select, proxies: &p_netflix [⚡ 全球自动, ⚡ 亚洲自动, ⚡ 台湾自动, ⚡ 狮城自动, ⚡ 香港自动, ⚡ 日本自动, ⚡ 美国自动, 🔯 台湾故转, 🔯 狮城故转, 🔯 香港故转, 🔯 日本故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   
-  - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 默认代理, ⚡ 全球自动, ⚡ 香港自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 默认代理, ⚡ 全球自动, ⚡ 亚洲自动, ⚡ 香港自动, ⚡ 日本自动, ⚡ 狮城自动, ⚡ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
 
   # === 底层节点筛选与故转组 ===
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
