@@ -1,8 +1,4 @@
-# BPI-R4 / 4GB / OpenClash v0.48.002 / alpha-smart-gdaf3ad0
-# 使用前：把下方 url 的 ### 换成真实订阅地址；原文件不被覆盖。
-# 保留下载规则中的 IBKR / interactivebrokers / Apple / blz 直连例外。
-# OpenClash 会覆写部分 DNS、嗅探与 TUN 参数，请同时阅读配套说明。
-
+#clash规则
 proxy-providers:
   blueberry:
     url: "###"
